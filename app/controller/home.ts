@@ -5,4 +5,13 @@ export default class HomeController extends Controller {
     const { ctx } = this;
     ctx.body = await ctx.service.test.sayHi('egg');
   }
+
+  public async test() {
+    const { ctx } = this;
+
+    ctx.body = {
+      error_code: 0,
+      message: '通过测试',
+    };
+  }
 }
